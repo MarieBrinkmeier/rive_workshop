@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:rive/rive.dart';
 import 'package:rive_workshop/widgets/base_widget.dart';
 import 'package:countup/countup.dart';
 
+/// Use this widget for the plug and play solution.
 class Score extends StatefulWidget {
+  /// Score shows the speedometer rive animation.
+  ///
+  /// This widget needs an [initialValue], it determines the position of the needle.
   const Score({
     Key? key,
     required this.initValue,
@@ -26,25 +29,22 @@ class _ScoreState extends State<Score> {
     initRive();
   }
 
-  void initRive() {
-    rootBundle.load('assets/animation/rive_workshop_speedo.riv').then(
-      (data) async {
-        final file = RiveFile.import(data);
+  Future<void> initRive() async {
+    final file =
+        await RiveFile.asset('assets/animation/rive_workshop_speedo.riv');
 
-        final artBoard = file.mainArtboard;
+    final artBoard = file.mainArtboard;
 
-        var animationController =
-            StateMachineController.fromArtboard(artBoard, 'speedometer');
+    var animationController =
+        StateMachineController.fromArtboard(artBoard, 'speedometer');
 
-        if (animationController != null) {
-          artBoard.addController(animationController);
-          initValue = animationController.findInput<double>('initValue');
-          initValue!.value = widget.initValue;
-        }
-        setState(
-          () => _riveArtboard = artBoard,
-        );
-      },
+    if (animationController != null) {
+      artBoard.addController(animationController);
+      initValue = animationController.findInput<double>('initValue');
+      initValue!.value = widget.initValue;
+    }
+    setState(
+      () => _riveArtboard = artBoard,
     );
   }
 

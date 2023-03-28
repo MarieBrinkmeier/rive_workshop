@@ -12,6 +12,7 @@ class RiveWorkshop extends StatelessWidget {
       theme: ThemeData(
         colorScheme: Theme.of(context).colorScheme.copyWith(
               primary: Colors.grey,
+              onPrimary:  const Color(0xFF202020),
               background: const Color(0xFF707070),
             ),
       ),

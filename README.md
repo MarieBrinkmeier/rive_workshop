@@ -181,3 +181,9 @@ Switch from "Design" to "Animate" in the top right corner.
 - add two timelines via the plus icon
 - select the "init_needle_zero" timeline in the first line
 - select the "init_needle_hundred" timeline in the second line and change the value on the right side to 100
+
+
+## How to integrate the animation into the project?
+
+Go to lib/widgets/your_score.dart uncomment all lines and follow the `//TODO` steps. 
+As an example you can use score.dart.

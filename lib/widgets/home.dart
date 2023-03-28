@@ -11,7 +11,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  var value = 50.0;
+  var value = 15.0;
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                   );
                 },
                 child: const Text(
-                  'show score',
+                  'Show Score',
                   style: TextStyle(
                     color: Color(0xFF202020),
                   ),

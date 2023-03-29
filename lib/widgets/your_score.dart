@@ -47,6 +47,7 @@
 //       //TODO add the controller to your artboard
 //
 //       //TODO initialise the input with the input name from the state machine
+//       // Use animationController.findInput
 //
 //       //TODO set the value of the input to widget.initValue
 //     }

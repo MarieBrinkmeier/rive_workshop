@@ -26,7 +26,7 @@
 //
 //   //TODO declare the artboard
 //   // Use the Artboard class for the rive artboard.
-//   //final _riveArtboard=
+//   //_riveArtboard;
 //   @override
 //   void initState() {
 //     super.initState();

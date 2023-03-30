@@ -187,3 +187,4 @@ Switch from "Design" to "Animate" in the top right corner.
 
 Go to lib/widgets/your_score.dart uncomment all lines and follow the `//TODO` steps. 
 As an example you can use score.dart.
+Don't forget the `//TODO` step at lib/widgets/home.dart.

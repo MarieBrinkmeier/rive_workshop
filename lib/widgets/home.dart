@@ -58,6 +58,7 @@ class _HomeState extends State<Home> {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
+                      //TODO use YourScore to test your widget
                       builder: (context) => Score(
                         initValue:  value.toInt().toDouble(),
                       ),
